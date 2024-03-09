@@ -11,30 +11,30 @@ import Footer from "./Footer";
 const Overlay = () => {
   return (
     <div className="overlay">
-      <div className="section">
+      <section className="section">
         <WeMake />
-      </div>
-      <div className="section">
+      </section>
+      <section className="section">
         <Numbers />
-      </div>
-      <div className="section">
+      </section>
+      <section className="section">
         <Count />
-      </div>
-      <div className="section">
+      </section>
+      <section className="section">
         <IndexAbout />
-      </div>
-      <div className="section">
+      </section>
+      <section className="section">
         <Community />
-      </div>
-      <div className="section">
+      </section>
+      <section className="section">
         <Partners />
-      </div>
-      <div className="section">
+      </section>
+      <section className="section">
         <Services />
-      </div>
-      <div className="section">
+      </section>
+      <section className="section">
         <Footer />
-      </div>
+      </section>
     </div>
   );
 };
