@@ -11,7 +11,7 @@ body {
   margin: 0;
   transform: rotateX(180deg);
 }
-canvas{
+canvas, .loading{
   transform: rotateX(180deg);
 }
 
