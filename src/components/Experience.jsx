@@ -32,8 +32,8 @@ export const Experience = (props) => {
 
   const [section, setSection] = useState(0);
 
-  const cameraPositionX = useMotionValue();
-  const cameraLookAtX = useMotionValue();
+  const cameraPositionX = useMotionValue(-5);
+  const cameraLookAtX = useMotionValue(5);
 
   useEffect(() => {
     animate(cameraPositionX, menuOpened ? -5 : 0, {
@@ -115,7 +115,7 @@ export const Experience = (props) => {
       {/* <axesHelper args={[20, 20, 20]} /> */}
 
       <Float floatIntensity={1} speed={1}>
-        <DotFinal scale={1} visible={item === "dot2"} r={ref1} />
+        <DotFinal scale={.2} visible={item === "dot2"} r={ref1} />
         <RocketFinal2 r={ref2} visible={item == "rocket final"} />
         <Unicorn1 r={ref3} visible={item === "unicorn1"} />
         <Cube r={random} visible={item === "cube"} />

@@ -18,6 +18,11 @@ canvas, .loading{
 
 .overlay>section{
   transform: rotateX(180deg)!important;
+  margin-left: auto!important;
+  margin-right: auto!important;
+
+
+
 }
 .smallcircle{
   /* width: 150px;

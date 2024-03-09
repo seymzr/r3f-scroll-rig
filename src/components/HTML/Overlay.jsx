@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import WeMake from "./WeMake";
 import Numbers from "./Numbers";
 import Count from "./Count";
@@ -9,15 +9,33 @@ import Services from "./Services";
 import Footer from "./Footer";
 
 import {motion} from 'framer-motion'
-const Section = (props) => {
-  const { children, mobileTop } = props;
+import { useInView } from "react-intersection-observer";
+import AppContext from "../../Context/Context";
 
+const Section = (props) => {
+  const { children, mobileTop,index,isInView,setIsInView } = props;
+  const { currentSection, setCurrentSection} = useContext(AppContext);
+
+  const [ref, inView] = useInView();
+
+  if (inView && !currentSection) {
+    // Section is in view for the first time
+    setIsInView(index)
+    console.log(isInView)
+    
+    // Perform actions or set values as needed
+    // For example:
+    // setSectionValue(true);
+  }
+  // useEffect(()=>{
+  //   setIsInView(index)
+  // },[isInView])
   return (
     <motion.section
-    style={{transform:"rotateX(180deg)"}}
+    ref={ref}
       className={`
       
-  h-screen w-screen p-8 max-w-screen-2xl mx-auto
+  h-screen w-screen p-8 max-w-full-2xl mx-auto
   flex flex-col items-start
   ${mobileTop ? "justify-start md:justify-center" : "justify-center"}
   `}
@@ -30,41 +48,42 @@ const Section = (props) => {
         y: 0,
         transition: {
           duration: 1,
-          delay: 0.6,
+          delay: 0.3,
         },
+        
+        
       }}
     >
       {children}
     </motion.section>
   );
 };
-const Overlay = () => {
+const Overlay = ({isInView,setIsInView}) => {
   return (
     <div className="overlay ">
-      <Section className="Section">
+      <Section isInView={isInView} setIsInView={setIsInView} index={0} mobileTop className="Section">
         <WeMake />
       </Section>
-      <Section className="Section">
+      <Section isInView={isInView} setIsInView={setIsInView} index={1} className="Section">
         <Numbers />
       </Section>
-      <Section className="Section">
+      <section   className="h-[50vh]"></section>
+      <Section isInView={isInView} setIsInView={setIsInView} index={3} className="Section">
         <Count />
       </Section>
-      <Section className="Section">
+      <Section isInView={isInView} setIsInView={setIsInView} index={4} className="Section">
         <IndexAbout />
       </Section>
-      <Section className="Section">
+      <Section isInView={isInView} setIsInView={setIsInView} index={5} className="Section">
         <Community />
       </Section>
-      <Section className="Section">
+      <Section isInView={isInView} setIsInView={setIsInView} index={6} className="Section">
         <Partners />
       </Section>
-      <Section className="Section">
+      <Section isInView={isInView} setIsInView={setIsInView} index={7} className="Section">
         <Services />
       </Section>
-      <Section className="Section">
-        <Footer />
-      </Section>
+      
     </div>
   );
 };

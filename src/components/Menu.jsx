@@ -5,7 +5,7 @@ export const Menu = (props) => {
     <>
       <button
         onClick={() => setMenuOpened(!menuOpened)}
-        className="z-20 fixed top-4 right-4 md:top-12 md:right-12 p-3 bg-indigo-600 w-11 h-11 rounded-md"
+        className="z-20 fixed top-[50%] right-4 md:top-[50%] md:right-12 p-3 bg-indigo-600 w-11 h-11 rounded-md"
       >
         <div
           className={`bg-white h-0.5 rounded-md w-full transition-all ${
@@ -25,13 +25,15 @@ export const Menu = (props) => {
       </button>
       <div
         className={`z-10 loading fixed top-0 right-0 bottom-0 bg-white transition-all overflow-hidden flex flex-col
-      ${menuOpened ? "w-full md:w-80" : "w-0"}`}
+      ${menuOpened ? "w-full md:h-80" : "w-10"}`}
       >
         <div className="flex-1 flex items-start justify-center flex-col gap-6 p-8">
           <MenuButton label="About" onClick={() => onSectionChange(0)} />
-          <MenuButton label="Numbers" onClick={() => onSectionChange(1)} />
-          <MenuButton label="Projects" onClick={() => onSectionChange(2)} />
-          <MenuButton label="Notable Startups" onClick={() => onSectionChange(3)} />
+          <MenuButton label="Numbers" onClick={() => onSectionChange(2)} />
+          <MenuButton label="Projects" onClick={() => onSectionChange(3)} />
+          <MenuButton label="Community" onClick={() => onSectionChange(4)} />
+          <MenuButton label="Partners" onClick={() => onSectionChange(5)} />
+          <MenuButton label="Notable Startups" onClick={() => onSectionChange(6)} />
         </div>
       </div>
     </>
