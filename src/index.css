@@ -20,8 +20,8 @@ canvas{
   transform: rotateX(180deg);
 }
 .smallcircle{
-  width: 150px;
-  height: 150px;
+  /* width: 150px;
+  height: 150px; */
   border-radius: 50%;
   background: radial-gradient(circle at 100px 100px, #f77926, #000);
   display: flex;
@@ -29,8 +29,8 @@ canvas{
   justify-content: center;
 }
 .bigcircle{
-  width: 300px;
-  height: 300px;
+  /* width: 300px;
+  height: 300px; */
   border-radius: 50%;
   background: radial-gradient(circle at 100px 100px, #FF7B25, #000);
   
@@ -43,8 +43,8 @@ canvas{
   align-items: center;
 }
 .community .circles>div{
-  width: 400px;
-  height: 400px;
+  /* width: 400px;
+  height: 400px; */
   border-radius: 50%;
 }
 .community .circle1{
