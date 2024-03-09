@@ -3,7 +3,7 @@ import React from "react";
 const Community = () => {
   return (
     <div className="community text-white my-8 mx-4 p-5 flex items-center justify-center">
-      <div className="circles">
+      <div className="circles w-full">
         <div className="circle3"></div>
         <div className="circle2"></div>
         <div className="circle1"></div>
