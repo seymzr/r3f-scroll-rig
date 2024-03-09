@@ -18,7 +18,9 @@
     "jotai": "^2.1.1",
     "leva": "^0.9.34",
     "react": "^18.2.0",
+    "react-countup": "^6.5.0",
     "react-dom": "^18.2.0",
+    "react-visibility-sensor": "^5.1.1",
     "three": "0.146.0"
   },
   "devDependencies": {

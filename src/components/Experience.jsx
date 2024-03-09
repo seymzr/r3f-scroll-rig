@@ -1,4 +1,5 @@
 import {
+  Environment,
   Float,
   MeshDistortMaterial,
   MeshWobbleMaterial,
@@ -13,6 +14,12 @@ import { Avatar } from "./Avatar";
 import { Background } from "./Background";
 import { Office } from "./Office";
 import { Projects } from "./Projects";
+import { DotFinal } from "./DotFinal";
+import { RocketFinal2 } from "./RocketFinal2";
+import { Unicorn1 } from "./Unicorn1";
+import { Cube } from "./Cube";
+import { useTransformation } from "../hooks/useTransformation";
+import { Vector3 } from "three";
 
 export const Experience = (props) => {
   const { menuOpened } = props;
@@ -64,11 +71,11 @@ export const Experience = (props) => {
     state.camera.lookAt(cameraLookAtX.get(), 0, 0);
 
     // const position = new THREE.Vector3();
-    if (section === 0) {
+    /* if (section === 0) {
       characterContainerAboutRef.current.getWorldPosition(
         characterGroup.current.position
       );
-    }
+    } */
     // console.log([position.x, position.y, position.z]);
 
     // const quaternion = new THREE.Quaternion();
@@ -78,142 +85,54 @@ export const Experience = (props) => {
 
     // console.log([euler.x, euler.y, euler.z]);
   });
+  const ref1 = useRef();
+  const ref2 = useRef();
+  const ref3 = useRef();
+  const random = useRef();
+  useTransformation(ref1, ref2, ref3, random);
+  const item = "dot2"; // Or any default value you want
+  const tl = useRef();
 
+  const scrollData = useScroll();
+  /* useFrame((state, delta) => {
+    tl.current.seek(scrollData.offset * tl.current.duration());
+  });
+
+  useLayoutEffect(() => {
+    tl.current = gsap.timeline({
+      defaults: { duration: 1, ease: "power1.inOut" },
+    });
+
+    /* tl.current
+      .to(ref1.current.position,{x:-1},0)
+      .to(ref1.current.position,{x:3.8},.01)
+      .to(ref1.current.position, { x: 3.8,y:-1 },.2 )
+       
+  }, []); */
   return (
     <>
-      <Background />
-      <motion.group
-        ref={characterGroup}
-        rotation={[-3.141592653589793, 1.2053981633974482, 3.141592653589793]}
-        scale={[officeScaleRatio, officeScaleRatio, officeScaleRatio]}
-        animate={"" + section}
-        transition={{
-          duration: 0.6,
-        }}
-        variants={{
-          0: {
-            scaleX: officeScaleRatio,
-            scaleY: officeScaleRatio,
-            scaleZ: officeScaleRatio,
-          },
-          1: {
-            y: -viewport.height + 0.5,
-            x: isMobile ? 0.3 : 0,
-            z: 7,
-            rotateX: 0,
-            rotateY: isMobile ? -Math.PI / 2 : 0,
-            rotateZ: 0,
-            scaleX: isMobile ? 1.5 : 1,
-            scaleY: isMobile ? 1.5 : 1,
-            scaleZ: isMobile ? 1.5 : 1,
-          },
-          2: {
-            x: isMobile ? -1.4 : -2,
-            y: -viewport.height * 2 + 0.5,
-            z: 0,
-            rotateX: 0,
-            rotateY: Math.PI / 2,
-            rotateZ: 0,
-            scaleX: 1,
-            scaleY: 1,
-            scaleZ: 1,
-          },
-          3: {
-            y: -viewport.height * 3 + 1,
-            x: 0.24,
-            z: 8.5,
-            rotateX: 0,
-            rotateY: -Math.PI / 4,
-            rotateZ: 0,
-            scaleX: 1,
-            scaleY: 1,
-            scaleZ: 1,
-          },
-        }}
-      >
-        <Avatar animation={characterAnimation} wireframe={section === 1} />
-      </motion.group>
-      <ambientLight intensity={1} />
-      <motion.group
-        position={[
-          isMobile ? 0 : 1.5 * officeScaleRatio,
-          isMobile ? -viewport.height / 6 : 2,
-          3,
-        ]}
-        scale={[officeScaleRatio, officeScaleRatio, officeScaleRatio]}
-        rotation-y={-Math.PI / 4}
-        animate={{
-          y: isMobile ? -viewport.height / 6 : 0,
-        }}
-        transition={{
-          duration: 0.8,
-        }}
-      >
-        <Office section={section} />
-        <group
-          ref={characterContainerAboutRef}
-          name="CharacterSpot"
-          position={[0.07, 0.16, -0.57]}
-          rotation={[-Math.PI, 0.42, -Math.PI]}
-        ></group>
-      </motion.group>
 
-      {/* SKILLS */}
-      <motion.group
-        position={[
-          0,
-          isMobile ? -viewport.height : -1.5 * officeScaleRatio,
-          -10,
-        ]}
-        animate={{
-          z: section === 1 ? 0 : -10,
-          y:
-            section === 1
-              ? -viewport.height
-              : isMobile
-              ? -viewport.height
-              : -1.5 * officeScaleRatio,
-        }}
-      >
-        <directionalLight position={[-5, 3, 5]} intensity={0.4} />
-        <Float>
-          <mesh position={[1, -3, -15]} scale={[2, 2, 2]}>
-            <sphereGeometry />
-            <MeshDistortMaterial
-              opacity={0.8}
-              transparent
-              distort={0.4}
-              speed={4}
-              color={"red"}
-            />
-          </mesh>
-        </Float>
-        <Float>
-          <mesh scale={[3, 3, 3]} position={[3, 1, -18]}>
-            <sphereGeometry />
-            <MeshDistortMaterial
-              opacity={0.8}
-              transparent
-              distort={1}
-              speed={5}
-              color="yellow"
-            />
-          </mesh>
-        </Float>
-        <Float>
-          <mesh scale={[1.4, 1.4, 1.4]} position={[-3, -1, -11]}>
-            <boxGeometry />
-            <MeshWobbleMaterial
-              opacity={0.8}
-              transparent
-              factor={1}
-              speed={5}
-              color={"blue"}
-            />
-          </mesh>
-        </Float>
-      </motion.group>
-      <Projects />
+      {/* <axesHelper args={[20, 20, 20]} /> */}
+
+      <Float floatIntensity={1} speed={1}>
+        <DotFinal scale={1} visible={item === "dot2"} r={ref1} />
+        <RocketFinal2 r={ref2} visible={item == "rocket final"} />
+        <Unicorn1 r={ref3} visible={item === "unicorn1"} />
+        <Cube r={random} visible={item === "cube"} />
+      </Float>
+      <Environment preset="sunset" blur={5} />
+      <Rig />
     </>
   );
 };
+
+function Rig() {
+  const { camera, mouse } = useThree();
+  const vec = new Vector3();
+
+  return useFrame(() => {
+    camera.position.lerp(vec.set(mouse.x, mouse.y, camera.position.z), 0.1);
+    camera.lookAt(0, 0, 0);
+  });
+}
+
