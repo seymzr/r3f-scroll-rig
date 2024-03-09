@@ -46,10 +46,10 @@ const IndexAbout = () => {
         cards={cardOptions}/> */}
       </div>
       <div className="about2 w-full">
-        <h3 className="text-6xl">
+        <h3 className="text-4xl md:text-6xl">
           SABAH<span className="text-[#60F486]" >.</span>academy
         </h3>
-        <p className="text-[#C5C5C5] text-xl">
+        <p className="text-[#C5C5C5] text-lg md:text-xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore
         </p>
@@ -58,10 +58,10 @@ const IndexAbout = () => {
         <img src={arrowup} alt="arrowup.svg" />
         </button>
         <ul className="list-style-none">
-          <li className="text-4xl font-medium my-3 text-[#b4b4b4] py-3 hover:text-white duration-300 border-y border-solid border-[#797979]">SABAH.incubation</li>
-          <li  className="text-4xl font-medium my-3 text-[#b4b4b4] py-3 hover:text-white duration-300 border-b border-solid border-[#797979]">SABAH.lab</li>
-          <li className="text-4xl font-medium my-3 text-[#b4b4b4] py-3 hover:text-white duration-300 border-b border-solid border-[#797979]">SABAH.studio</li>
-          <li className="text-4xl font-medium my-3 text-[#b4b4b4] py-3 hover:text-white duration-300 border-b border-solid border-[#797979]">SABAH.fund</li>
+          <li className="text-xl md:text-4xl font-medium my-3 text-[#b4b4b4] py-3 hover:text-white duration-300 border-y border-solid border-[#797979]">SABAH.incubation</li>
+          <li  className="text-xl md:text-4xl font-medium my-3 text-[#b4b4b4] py-3 hover:text-white duration-300 border-b border-solid border-[#797979]">SABAH.lab</li>
+          <li className="text-xl md:text-4xl font-medium my-3 text-[#b4b4b4] py-3 hover:text-white duration-300 border-b border-solid border-[#797979]">SABAH.studio</li>
+          <li className="text-xl md:text-4xl font-medium my-3 text-[#b4b4b4] py-3 hover:text-white duration-300 border-b border-solid border-[#797979]">SABAH.fund</li>
         </ul>
       </div>
     </div>

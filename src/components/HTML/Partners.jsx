@@ -6,7 +6,7 @@ import orangeParticle from '../../assets/orangeparticle.png'
 const Partners = () => {
   return (
     <div className="text-white container mx-auto flex items-center flex-col">
-      <h2 className="text-8xl font-medium py-6">Partners</h2>
+      <h2 className="text-5xl md:text-8xl font-medium py-6">Partners</h2>
       <div className="flex items-center justify-between w-full ">
 
       <div className="smallcircle " style={{ alignSelf: "flex-end" }}>

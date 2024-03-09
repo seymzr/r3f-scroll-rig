@@ -9,10 +9,10 @@ const Community = () => {
         <div className="circle1"></div>
       </div>
       <div className="text">
-        <h2 className="text-7xl font-medium ">
+        <h2 className="text-5xl md:text-7xl font-medium ">
           <span className="text-[orange]">Our</span> Community
         </h2>
-        <p className="text-3xl py-3">
+        <p className="text-xl md:text-3xl py-3">
           Join the SABAH.HUB ecosystem and get access to the brightest experts
           in the world’s leading education and corporate institutions
         </p>

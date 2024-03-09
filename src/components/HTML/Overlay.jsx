@@ -37,7 +37,7 @@ const Section = (props) => {
       
   h-screen w-screen p-8 max-w-full-2xl mx-auto
   flex flex-col items-start
-  ${mobileTop ? "justify-start md:justify-center" : "justify-center"}
+  ${mobileTop ? "justify-center md:justify-center" : "justify-center"}
   `}
       initial={{
         opacity: 0,

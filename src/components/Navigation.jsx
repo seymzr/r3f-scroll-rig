@@ -5,7 +5,7 @@ export const Navigation = (props) => {
     <>
       <div
 
-        className="z-20 hidden md:block loading fixed top-[50%] right-12 md:top-[50%]    w-16 h-11"
+        className="z-50 hidden md:block loading fixed top-[50%] right-12 md:top-[50%]    w-16 h-11"
       >
           <MenuButton label="About" isInView={isInView} index={0} onClick={() => onSectionChange(0)} />
           <MenuButton label="Numbers" isInView={isInView} index={2} onClick={() => onSectionChange(2)} />
