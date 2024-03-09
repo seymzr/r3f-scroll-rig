@@ -4,11 +4,15 @@ import VisibilitySensor from "react-visibility-sensor";
 
 const Count = () => {
   return (
-    <div className="count">
+    <div className="count text-white p-2 px-12 container mx-auto flex items-center justify-between text-6xl">
       
-      <div className="counts">
-        <div className="single">
-          <div style={{ display: "flex", alignItems: "center" }}>
+      <div className="counts ">
+      <h2>
+        SABAH<span className="text-[orange]">.</span>HUB{" "}
+        <span className="text-[orange]">in numbers</span>
+      </h2>
+        <div className="flex flex-col items-center m-5 font-bold text-9xl">
+          <div className="flex items-center" >
             <VisibilitySensor
               partialVisibility
               offset={{ bottom: 100, top: 100 }}
@@ -19,11 +23,11 @@ const Count = () => {
             </VisibilitySensor>
             mln
           </div>
-          <span className="span">Lorem Ipsum</span>
+          <span className="text-3xl font-normal">Lorem Ipsum</span>
         </div>
-        <div className="double">
-          <div className="single">
-            <div style={{ display: "flex", alignItems: "center" }}>
+        <div className="flex items-center justify-between">
+          <div className="flex flex-col items-center m-5 font-bold text-6xl">
+            <div className="flex items-center" >
               <VisibilitySensor
                 partialVisibility
                 offset={{ bottom: 100, top: 100 }}
@@ -36,10 +40,10 @@ const Count = () => {
               </VisibilitySensor>
               k
             </div>
-            <span className="span">Lorem Ipsum</span>
+            <span className="text-3xl font-normal">Lorem Ipsum</span>
           </div>
-          <div className="single">
-            <div style={{ display: "flex", alignItems: "center" }}>
+          <div className="flex flex-col items-center m-5 font-bold text-6xl">
+            <div className="flex items-center" >
               <VisibilitySensor
                 partialVisibility
                 offset={{ bottom: 100, top: 100 }}
@@ -52,12 +56,12 @@ const Count = () => {
               </VisibilitySensor>
               k
             </div>
-            <span className="span">Lorem Ipsum</span>
+            <span className="text-3xl font-normal">Lorem Ipsum</span>
           </div>
         </div>
-        <div className="double">
-          <div className="single">
-            <div style={{ display: "flex", alignItems: "center" }}>
+        <div className="flex items-center justify-between">
+          <div className="flex flex-col items-center m-5 font-bold text-6xl">
+            <div className="flex items-center" >
               <VisibilitySensor
                 partialVisibility
                 offset={{ bottom: 100, top: 100 }}
@@ -70,10 +74,10 @@ const Count = () => {
               </VisibilitySensor>
               k
             </div>
-            <span className="span">Lorem Ipsum</span>
+            <span className="text-3xl font-normal">Lorem Ipsum</span>
           </div>
-          <div className="single">
-            <div style={{ display: "flex", alignItems: "center" }}>
+          <div className="flex flex-col items-center m-5 font-bold text-6xl">
+            <div className="flex items-center" >
               <VisibilitySensor
                 partialVisibility
                 offset={{ bottom: 100, top: 100 }}
@@ -86,7 +90,7 @@ const Count = () => {
               </VisibilitySensor>
               k
             </div>
-            <span className="span">Lorem Ipsum</span>
+            <span className="text-3xl font-normal">Lorem Ipsum</span>
           </div>
         </div>
       </div>

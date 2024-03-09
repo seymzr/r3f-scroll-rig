@@ -21,6 +21,8 @@ function App() {
     setMenuOpened(false);
   }, [section]);
 
+  const isMobile = window.innerWidth < 768;
+
   return (
     <>
       <LoadingScreen started={started} setStarted={setStarted} />
@@ -31,8 +33,9 @@ function App() {
       >
         <Canvas shadows camera={{ position: [0, 3, 10], fov: 42 }}>
           <color attach="background" args={["#000"]} />
-          <ScrollControls pages={7} damping={0.1}>
-            <ScrollManager section={section} onSectionChange={setSection} />
+          <ScrollControls pages={5} damping={0.1}>
+            {/* <ScrollManager section={section} onSectionChange={setSection} /> */}
+
 
               <Suspense>
                 {started && (
@@ -40,17 +43,19 @@ function App() {
                 )}
               </Suspense>
 
+
             <Scroll html>
               {started && <Overlay  />}
             </Scroll>
           </ScrollControls>
         </Canvas>
+        
         <Menu
           onSectionChange={setSection}
           menuOpened={menuOpened}
           setMenuOpened={setMenuOpened}
         />
-        <Cursor />
+        {/* <Cursor /> */}
       </MotionConfig>
       <Leva hidden />
     </>

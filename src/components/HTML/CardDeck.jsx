@@ -130,20 +130,20 @@ const CardDeck = ({ cards, leftPressed, rightPressed }) => {
   }, [deck]);
 
   return (
-    <div className="card_container">
+    <div className="bg-[#DEDEDE] w-[600px] h-[500px] relative rounded-[8px]">
       {deck.map((card, index) => (
         <div
-          className="card about1div"
+          className="card bg-[#e9e9e9] absolute top-[50px] left-[50px] drop-shadow-md w-[600px] h-[500px] rounded-[8px] p-8"
           key={index}
           ref={(el) => (cardRefs.current[index] = el)}
           style={{ position: "absolute" }}
         >
           <img src={card.logo} alt="sabahacademy.png" />
-            <hr />
-            <p>
+            <hr className="h-[2px] bg-[#502688] border-0 w-[30%] my-5" />
+            <p className="text-[#171717] bg-[#fbfbfb] px-4 py-6 rounded-[8px]">
               {card.text}
             </p>
-            <button>Learn More</button>
+            <button className="gradientbutton my-4">Learn More</button>
         </div>
       ))}
     </div>

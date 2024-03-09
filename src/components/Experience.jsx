@@ -121,7 +121,7 @@ export const Experience = (props) => {
         <Cube r={random} visible={item === "cube"} />
       </Float>
       <Environment preset="sunset" blur={5} />
-      <Rig />
+      {/* <Rig /> */}
     </>
   );
 };

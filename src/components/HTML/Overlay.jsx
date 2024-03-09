@@ -10,7 +10,7 @@ import Footer from "./Footer";
 
 const Overlay = () => {
   return (
-    <div className="overlay">
+    <div className="overlay ">
       <section className="section">
         <WeMake />
       </section>

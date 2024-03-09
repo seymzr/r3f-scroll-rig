@@ -39,17 +39,17 @@ const IndexAbout = () => {
   };
 
   return (
-    <div className="about">
-      <div className="about1">
+    <div className="about container mx-auto text-white flex items-center justify-between my-8">
+      <div className="about1 w-full">
         <CardDeck  leftPressed={leftPressed}
         rightPressed={rightPressed}
         cards={cardOptions}/>
       </div>
-      <div className="about2">
-        <h3>
-          SABAH<span style={{ color: "#60F486" }}>.</span>academy
+      <div className="about2 w-full">
+        <h3 className="text-6xl">
+          SABAH<span className="text-[#60F486]" >.</span>academy
         </h3>
-        <p>
+        <p className="text-[#C5C5C5] text-xl">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore
         </p>
@@ -57,11 +57,11 @@ const IndexAbout = () => {
 
         <img src={arrowup} alt="arrowup.svg" />
         </button>
-        <ul>
-          <li>SABAH.incubation</li>
-          <li>SABAH.lab</li>
-          <li>SABAH.studio</li>
-          <li>SABAH.fund</li>
+        <ul className="list-style-none">
+          <li className="text-4xl font-medium my-3 text-[#b4b4b4] py-3 hover:text-white duration-300 border-y border-solid border-[#797979]">SABAH.incubation</li>
+          <li  className="text-4xl font-medium my-3 text-[#b4b4b4] py-3 hover:text-white duration-300 border-b border-solid border-[#797979]">SABAH.lab</li>
+          <li className="text-4xl font-medium my-3 text-[#b4b4b4] py-3 hover:text-white duration-300 border-b border-solid border-[#797979]">SABAH.studio</li>
+          <li className="text-4xl font-medium my-3 text-[#b4b4b4] py-3 hover:text-white duration-300 border-b border-solid border-[#797979]">SABAH.fund</li>
         </ul>
       </div>
     </div>
