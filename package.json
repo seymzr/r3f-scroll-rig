@@ -22,6 +22,7 @@
     "react-dom": "^18.2.0",
     "react-intersection-observer": "^9.8.1",
     "react-visibility-sensor": "^5.1.1",
+    "swiper": "^11.0.7",
     "three": "0.146.0"
   },
   "devDependencies": {

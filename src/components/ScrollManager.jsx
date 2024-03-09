@@ -1,3 +1,45 @@
+/* import { useScroll } from "@react-three/drei";
+import { useFrame } from "@react-three/fiber";
+import gsap from "gsap";
+import React, { useEffect, useRef } from "react";
+
+export const ScrollManager = (props) => {
+  const { section, onSectionChange } = props;
+  const data = useScroll();
+  const lastScroll = useRef(0);
+  const isAnimating = useRef(false);
+
+  useEffect(() => {
+    gsap.to(data.el, {
+      duration: .5,
+      scrollTop: section * data.el.clientHeight+100,
+      onStart: () => {
+        isAnimating.current = true;
+      },
+      onComplete: () => {
+        isAnimating.current = false;
+      },
+    });
+  }, [section]);
+
+  useFrame(() => {
+    if (isAnimating.current) {
+      lastScroll.current = data.scroll.current;
+      return;
+    }
+
+    const curSection = Math.floor(data.scroll.current * (data.pages));
+    onSectionChange(curSection);
+    lastScroll.current = data.scroll.current;
+  });
+
+  return null;
+};
+
+ */
+
+
+
 import { useScroll } from "@react-three/drei";
 import { useFrame } from "@react-three/fiber";
 import { gsap } from "gsap";
@@ -47,3 +89,4 @@ export const ScrollManager = (props) => {
 
   return null;
 };
+ 

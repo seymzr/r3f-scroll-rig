@@ -20,7 +20,8 @@ const Section = (props) => {
 
   if (inView && !currentSection) {
     // Section is in view for the first time
-    setIsInView(index)
+    setIsInView(index>2?index+0.5:index)
+
     console.log(isInView)
     
     // Perform actions or set values as needed

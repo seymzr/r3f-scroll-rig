@@ -58,13 +58,13 @@ function App() {
           </ScrollControls>
         </Canvas>
         
-        <Navigation
+        {started&& <Navigation
           section = {section}
           onSectionChange={setSection}
           menuOpened={menuOpened}
           setMenuOpened={setMenuOpened}
           isInView={isInView}
-        />
+        />}
         {/* <Cursor /> */}
       </MotionConfig>
       <Leva hidden />
