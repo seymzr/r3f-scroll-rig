@@ -17,8 +17,8 @@ export const Menu = (props) => {
       <div
         className={`z-40 loading fixed top-0 right-0 bottom-0  transition-all  overflow-hidden flex flex-col-reverse justify-between py-24 
       ${menuOpened ? 'w-full h-full bg-black' : 'w-full h-0'}`}>
-        <div className="container mx-auto loading flex items-start justify-between px-4 py-24">
-          <div className="flex">
+        <div className="container mx-auto loading flex flex-col md:flex-row items-start justify-between px-4 py-24">
+          <div className="hidden md:flex">
             <a href="">
               <img className="mx-3" src={facebook} alt="facebook " />
             </a>
@@ -58,27 +58,9 @@ export const Menu = (props) => {
           </div>
           <div className="flex flex-col">
             <h2 className="text-[#FF7B25] font-medium text-2xl mb-2">Company</h2>
-            <a className="text-xl text-white py-1 font-normal" href="">
-              Privacy
-            </a>
-            <a className="text-xl text-white py-1 font-normal" href="">
-              Support
-            </a>
-            <a className="text-xl text-white py-1 font-normal" href="">
-              Help Desk
-            </a>
-            <a className="text-xl text-white py-1 font-normal" href="">
-              FAQ
-            </a>
-            <a className="text-xl text-white py-1 font-normal" href="">
-              Blog
-            </a>
-            <a className="text-xl text-white py-1 font-normal" href="">
-              Career
-            </a>
-            <a className="text-xl text-white py-1 font-normal" href="">
-              Contact
-            </a>
+            <div>
+              {}
+            </div>
           </div>
           <div className="self-center">
             <h2 className="text-white font-medium text-2xl">Subscribe to our newsletter</h2>
