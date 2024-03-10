@@ -1,53 +1,120 @@
+import logo from '../assets/logo.svg'
+import facebook from '../assets/facebook.svg'
+import instagram from '../assets/instagram.svg'
+import linkedin from '../assets/linkedin.svg'
+import newsletter from '../assets/newsletter.svg'
 export const Menu = (props) => {
-  const { onSectionChange, menuOpened, setMenuOpened } = props;
+  const { onSectionChange, menuOpened, setMenuOpened } = props
 
   return (
-    <>
-      <button
-        onClick={() => setMenuOpened(!menuOpened)}
-        className="z-20 fixed top-[50%] right-4 md:top-[50%] md:right-12 p-3 bg-indigo-600 w-11 h-11 rounded-md"
-      >
-        <div
-          className={`bg-white h-0.5 rounded-md w-full transition-all ${
-            menuOpened ? "rotate-45  translate-y-0.5" : ""
-          }`}
-        />
-        <div
-          className={`bg-white h-0.5 rounded-md w-full my-1 ${
-            menuOpened ? "hidden" : ""
-          }`}
-        />
-        <div
-          className={`bg-white h-0.5 rounded-md w-full transition-all ${
-            menuOpened ? "-rotate-45" : ""
-          }`}
-        />
+    <div className="flex  w-full justify-between">
+      <img className="z-50" src={logo} alt="sabahhub logo" />
+      <button onClick={() => setMenuOpened(!menuOpened)} className="z-50    p-3 9 w-11 h-11 rounded-md">
+        <div className={`bg-white h-0.5 rounded-md w-full transition-all ${menuOpened ? 'rotate-45  translate-y-0.5' : ''}`} />
+        <div className={`bg-white h-0.5 rounded-md w-full my-1 ${menuOpened ? 'hidden' : ''}`} />
+        <div className={`bg-white h-0.5 rounded-md w-full transition-all ${menuOpened ? '-rotate-45' : ''}`} />
       </button>
       <div
-        className={`z-10 loading fixed top-0 right-0 bottom-0 bg-white transition-all overflow-hidden flex flex-col
-      ${menuOpened ? "w-full md:h-80" : "w-10"}`}
-      >
-        <div className="flex-1 flex items-start justify-center flex-col gap-6 p-8">
-          <MenuButton label="About" onClick={() => onSectionChange(0)} />
-          <MenuButton label="Numbers" onClick={() => onSectionChange(2)} />
-          <MenuButton label="Projects" onClick={() => onSectionChange(3)} />
-          <MenuButton label="Community" onClick={() => onSectionChange(4)} />
-          <MenuButton label="Partners" onClick={() => onSectionChange(5)} />
-          <MenuButton label="Notable Startups" onClick={() => onSectionChange(6)} />
+        className={`z-40 loading fixed top-0 right-0 bottom-0  transition-all  overflow-hidden flex flex-col-reverse justify-between py-24 
+      ${menuOpened ? 'w-full h-full bg-black' : 'w-full h-0'}`}>
+        <div className="container mx-auto loading flex items-start justify-between px-4 py-24">
+          <div className="flex">
+            <a href="">
+              <img className="mx-3" src={facebook} alt="facebook " />
+            </a>
+            <a href="">
+              <img className="mx-3" src={linkedin} alt="linkedin " />
+            </a>
+            <a href="">
+              <img className="mx-3" src={instagram} alt="instagram " />
+            </a>
+          </div>
+          <div className="flex flex-col">
+            <h2 className="text-[#FF7B25] font-medium text-2xl mb-2">About</h2>
+            <a className="text-xl text-white py-1 font-normal" href="">
+              Our Team
+            </a>
+            <a className="text-xl text-white py-1 font-normal" href="">
+              Overview
+            </a>
+            <a className="text-xl text-white py-1 font-normal" href="">
+              Our Portfolio
+            </a>
+            <a className="text-xl text-white py-1 font-normal" href="">
+              Baku ID
+            </a>
+            <a className="text-xl text-white py-1 font-normal" href="">
+              About Us
+            </a>
+            <a className="text-xl text-white py-1 font-normal" href="">
+              Blog
+            </a>
+            <a className="text-xl text-white py-1 font-normal" href="">
+              Career
+            </a>
+            <a className="text-xl text-white py-1 font-normal" href="">
+              Contact
+            </a>
+          </div>
+          <div className="flex flex-col">
+            <h2 className="text-[#FF7B25] font-medium text-2xl mb-2">Company</h2>
+            <a className="text-xl text-white py-1 font-normal" href="">
+              Privacy
+            </a>
+            <a className="text-xl text-white py-1 font-normal" href="">
+              Support
+            </a>
+            <a className="text-xl text-white py-1 font-normal" href="">
+              Help Desk
+            </a>
+            <a className="text-xl text-white py-1 font-normal" href="">
+              FAQ
+            </a>
+            <a className="text-xl text-white py-1 font-normal" href="">
+              Blog
+            </a>
+            <a className="text-xl text-white py-1 font-normal" href="">
+              Career
+            </a>
+            <a className="text-xl text-white py-1 font-normal" href="">
+              Contact
+            </a>
+          </div>
+          <div className="self-center">
+            <h2 className="text-white font-medium text-2xl">Subscribe to our newsletter</h2>
+            <div className="w-fit relative my-3">
+              <input
+                type="email"
+                placeholder="Your email"
+                className=" rounded-[8px] border border-solid border-[#EBEAED] text-white bg-transparent p-2 px-3 w-[330px]"
+              />
+              <button className="bg-[#ff7b25] rounded-[8px] p-3 absolute right-0">
+                <img src={newsletter} alt="newsletter" />
+              </button>
+            </div>
+            <div className="flex flex-col w-full">
+              <div className="flex items-center">
+                <span className="font-bold text-white mr-2">A: </span>
+                <p className="text-lg text-white">57 Uzeyir Hajibeyov, Baku, Azerbaijan</p>
+              </div>
+              <div className="flex items-center">
+              <span className="font-bold text-white mr-2">E: </span>
+              <p className="text-lg text-white">info@sabahlab.edu.az</p>
+              </div>
+              <div className="flex items-center">
+              <span className="font-bold text-white mr-2 self-start">P: </span>{' '}
+              <p className="text-lg text-white">
+                Acceleration: + 994 (051) 240-16-97 <br />
+                Incubation: + 994 (051) 277-13-50
+              </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p className=' loading text-lg text-white text-center'>&copy; 2024 SABAH.Hub. All rights reserved.</p>
         </div>
       </div>
-    </>
-  );
-};
-
-const MenuButton = (props) => {
-  const { label, onClick } = props;
-  return (
-    <button
-      onClick={onClick}
-      className="text-2xl font-bold cursor-pointer hover:text-indigo-600 transition-colors"
-    >
-      {label}
-    </button>
-  );
-};
+    </div>
+  )
+}

@@ -19,6 +19,8 @@ function App() {
   const [menuOpened, setMenuOpened] = useState(false);
   const [isInView,setIsInView] = useState(0)
 
+  const [navOpened,setNavOpened] = useState(false)
+
   useEffect(() => {
     setMenuOpened(false);
   }, [section]);
@@ -53,7 +55,7 @@ function App() {
 
 
             <Scroll html>
-              {started && <Overlay setIsInView={setIsInView} isInView={isInView}  />}
+              {started && <Overlay navOpened={navOpened} setNavOpened={setNavOpened} setIsInView={setIsInView} isInView={isInView}  />}
             </Scroll>
           </ScrollControls>
         </Canvas>
@@ -64,6 +66,7 @@ function App() {
           menuOpened={menuOpened}
           setMenuOpened={setMenuOpened}
           isInView={isInView}
+          navOpened={navOpened}
         />}
         {/* <Cursor /> */}
       </MotionConfig>

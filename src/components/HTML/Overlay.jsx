@@ -59,7 +59,7 @@ const Section = (props) => {
     </motion.section>
   );
 };
-const Overlay = ({isInView,setIsInView}) => {
+const Overlay = ({isInView,setIsInView,navOpened,setNavOpened}) => {
   return (
     <div className="overlay ">
       <Section isInView={isInView} setIsInView={setIsInView} index={0} mobileTop className="Section">
@@ -82,7 +82,7 @@ const Overlay = ({isInView,setIsInView}) => {
         <Partners />
       </Section>
       <Section isInView={isInView} setIsInView={setIsInView} index={7} className="Section">
-        <Services />
+        <Services navOpened={navOpened} setNavOpened={setNavOpened} />
       </Section>
       
     </div>
