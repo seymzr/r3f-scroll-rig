@@ -22,7 +22,7 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default function Carousel() {
   return (
-    < div style={{width:"100vw"}}>
+    < div style={{width:"100vw"}} className=''>
       <Swiper
       loop={true}
       slidesPerView={window.innerWidth<768?4:7}

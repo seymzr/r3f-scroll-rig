@@ -14,7 +14,7 @@ import Carousel from './Carousel'
 const Partners = () => {
   return (
     <div className="partners text-white container mx-auto flex items-center flex-col">
-      <h2 className="text-5xl md:text-8xl font-medium py-6">Partners</h2>
+      <h2 className="text-5xl md:text-8xl font-medium py-6 my-4">Partners</h2>
 
       <div className="w-[90%] mx-auto grid grid-cols-3 place-items-center gap-[90px] md:gap-[30px] ">
         <div className=" h-[90px] md:h-[200px] w-[120px] md:w-[300px] p-5 border border-solid border-white/50 rounded-[8px]  backdrop-blur-sm flex items-center justify-center">
