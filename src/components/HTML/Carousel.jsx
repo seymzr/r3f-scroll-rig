@@ -22,23 +22,10 @@ import { Autoplay, Pagination, Navigation } from 'swiper/modules';
 
 export default function Carousel() {
   return (
-    < div style={{height:"100vh",width:"100vw"}}>
+    < div style={{width:"100vw"}}>
       <Swiper
       loop={true}
-      breakpoints={{
-        640: {
-          slidesPerView:5,
-          spaceBetween: 0,
-        },
-        768: {
-          slidesPerView: 6,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 7,
-          spaceBetween: 50,
-        },
-      }}
+      slidesPerView={window.innerWidth<768?4:7}
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
