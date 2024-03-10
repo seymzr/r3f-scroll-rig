@@ -94,14 +94,14 @@ canvas, .loading{
   background-image: radial-gradient(#181818aa 50%,#18181800 100%);
 }
 
-.swiper-slide{
+.community .swiper-slide{
   width: 250px!important;
   height: 250px!important;
   background: red;
   border-radius: 50%;
   margin-right: -200px!important;
 }
-
-
-
-
+.swiper-wrapper{
+  display: flex;
+  align-items: center;
+}

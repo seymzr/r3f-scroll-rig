@@ -37,7 +37,7 @@ export const Menu = (props) => {
             <h2 className="text-[#FF7B25] font-medium text-2xl ">About</h2>
             <button onClick={()=>{setAboutClicked(!aboutClicked)}} className='ml-12 md:hidden '><img className={`${aboutClicked?"-rotate-90":""} duration-300`}src={rightarrow} alt="rightarrow" /></button>
             </div>
-            <div className={`${aboutClicked?"block":"hidden md:block"} duration-300 flex flex-col`}>
+            <div className={`${aboutClicked?"block":"hidden md:flex"} duration-300 fex flex-col`}>
             <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
               Our Team
             </a>
@@ -70,7 +70,7 @@ export const Menu = (props) => {
             <h2 className="text-[#FF7B25] font-medium text-2xl ">Company</h2>
             <button onClick={()=>{setCompanyClicked(!companyClicked)}} className='ml-12 md:hidden '><img className={`${companyClicked?"-rotate-90":""} duration-300`}src={rightarrow} alt="rightarrow" /></button>
             </div>
-            <div className={`${companyClicked?"block":"hidden md:block"} duration-300 flex flex-col`}>
+            <div className={`${companyClicked?"block":"hidden md:flex"} duration-300  flex-col`}>
               <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
                 Privacy
               </a>
@@ -94,15 +94,15 @@ export const Menu = (props) => {
               </a>
             </div>
           </div>
-          <div className="self-center">
-            <h2 className="text-white font-medium text-2xl">Subscribe to our newsletter</h2>
-            <div className="w-fit relative my-3">
+          <div className="w-full md:w-fit my-5 md:my-0 flex flex-col items-center self-center">
+            <h2 className="text-white font-medium text-2xl self-start">Subscribe to our newsletter</h2>
+            <div className="w-fit relative my-3 flex flex-col ">
               <input
                 type="email"
                 placeholder="Your email"
-                className=" rounded-[8px] border border-solid border-[#EBEAED] text-white bg-transparent p-2 px-3 w-[330px]"
+                className=" rounded-[8px] w-full border border-solid border-[#EBEAED] text-white bg-transparent p-2 px-3 w-[330px]"
               />
-              <button className="bg-[#ff7b25] rounded-[8px] p-3 absolute right-0">
+              <button className="bg-[#ff7b25] rounded-[8px] p-3 px-4 absolute right-0">
                 <img src={newsletter} alt="newsletter" />
               </button>
             </div>
