@@ -177,15 +177,20 @@ canvas, .loading{
     margin-left: -2rem;
     opacity: 1;
   } */
-  .swiper-slide-prev>div{
+  .services .swiper-slide-fully-visible>div{
     background-color: #dcdcdc!important;
     backdrop-filter: blur(4px);
   }
-  .swiper-slide-prev>div>img , .swiper-slide-prev>div>p:last-child{
+  .services .swiper-slide-fully-visible>div>img , .swiper-slide-fully-visible>div>p:last-child{
     display: block!important;
   }
   
-  .swiper-slide img, .swiper-slide p:last-child{
+  .services .swiper-slide>div{
+
+    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06))!important;
+  }
+  .services .swiper-slide img , .services .swiper-slide p:last-child{
     display: none!important;
   }
+  
   

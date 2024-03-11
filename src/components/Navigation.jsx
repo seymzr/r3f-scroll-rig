@@ -7,12 +7,12 @@ export const Navigation = (props) => {
 
         className="z-10 hidden md:block loading fixed top-[50%] left-12 md:top-[50%]    w-16 h-11"
       >
-          <MenuButton label="About" isInView={isInView} index={0} onClick={() => onSectionChange(0)} />
-          <MenuButton label="Numbers" isInView={isInView} index={2.5} onClick={() => onSectionChange(2.7)} />
-          <MenuButton label="Projects" isInView={isInView} index={3.5} onClick={() => onSectionChange(3.6)} />
-          <MenuButton label="Community" isInView={isInView} index={4.5} onClick={() => onSectionChange(4.6)} />
-          <MenuButton label="Partners" isInView={isInView} index={5.5} onClick={() => onSectionChange(5.6)} />
-          <MenuButton label="Startups" isInView={isInView} index={6.5} onClick={() => onSectionChange(6.6)} />
+          <MenuButton label="About" isInView={isInView} index={0} onClick={() => {onSectionChange(0)}} />
+          <MenuButton label="Numbers" isInView={isInView} index={3.5} onClick={() => onSectionChange(2.7)} />
+          <MenuButton label="Projects" isInView={isInView} index={4.5} onClick={() => onSectionChange(3.7)} />
+          <MenuButton label="Community" isInView={isInView} index={5.5} onClick={() => onSectionChange(4.7)} />
+          <MenuButton label="Partners" isInView={isInView} index={6.7} onClick={() => onSectionChange(5.7)} />
+          <MenuButton label="Startups" isInView={isInView} index={7.5} onClick={() => onSectionChange(7.5)} />
       </div>}
       
     </>

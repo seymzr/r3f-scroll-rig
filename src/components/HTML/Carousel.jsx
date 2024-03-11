@@ -36,15 +36,15 @@ export default function Carousel() {
         modules={[Autoplay]}
         className="mySwiper"
       >
-        <SwiperSlide><img src={asana} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={jira} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={slack} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={pashaholding} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={tehsil} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={neqliyyat} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={iqtisadiyyat} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={atlassian} alt="" /></SwiperSlide>
-        <SwiperSlide><img src={socar} alt="" /></SwiperSlide>
+        <SwiperSlide><img src={asana} alt="asanalogo" /></SwiperSlide>
+        <SwiperSlide><img src={jira} alt="jira" /></SwiperSlide>
+        <SwiperSlide><img src={slack} alt="logo" /></SwiperSlide>
+        <SwiperSlide><img src={pashaholding} alt="logo" /></SwiperSlide>
+        <SwiperSlide><img src={tehsil} alt="logo" /></SwiperSlide>
+        <SwiperSlide><img src={neqliyyat} alt="logo" /></SwiperSlide>
+        <SwiperSlide><img src={iqtisadiyyat} alt="logo" /></SwiperSlide>
+        <SwiperSlide><img src={atlassian} alt="logo" /></SwiperSlide>
+        <SwiperSlide><img src={socar} alt="logo" /></SwiperSlide>
       </Swiper>
     </div>
   );

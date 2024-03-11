@@ -66,6 +66,7 @@ function App() {
           menuOpened={menuOpened}
           setMenuOpened={setMenuOpened}
           isInView={isInView}
+          setIsInView ={setIsInView}
           navOpened={navOpened}
         />}
         {/* <Cursor /> */}
