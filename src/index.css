@@ -154,3 +154,7 @@ canvas, .loading{
         border: white;
     }
   }
+
+  .swiper-slide-shadow-top, .swiper-slide-shadow-coverflow{
+    display: none;
+  }
