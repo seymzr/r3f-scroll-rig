@@ -68,7 +68,7 @@ const Overlay = ({isInView,setIsInView,navOpened,setNavOpened}) => {
       <Section isInView={isInView} setIsInView={setIsInView} index={1} className="Section">
         <Numbers />
       </Section>
-      <section   className="h-[50vh]"></section>
+      <section   className="h-[60vh]"></section>
       <Section isInView={isInView} setIsInView={setIsInView} index={3} className="Section">
         <Count />
       </Section>

@@ -148,13 +148,44 @@ canvas, .loading{
     font-size: 18px;
     box-shadow: -1px 0px 1px #f00,1px 0 1px #00f;
     transition: .3s;
-    &:hover{
-        background-image:linear-gradient(60deg, rgb(255, 0, 0), #4000ff) ;
-        color: white;
-        border: white;
-    }
+    
   }
+  .about1div button:hover{
 
+      background-image:linear-gradient(60deg, rgb(255, 0, 0), #4000ff) ;
+      color: white;
+      border: white;
+
+  }
   .swiper-slide-shadow-top, .swiper-slide-shadow-coverflow{
     display: none;
   }
+  /* 
+  <ul className='list-style-none'>
+        <li className='-ml-8 opacity-50 text-lg md:text-2xl m-4'>Lorem, ipsum</li>
+        <li className='-ml-4 opacity-75 text-lg md:text-2xl m-4'>Lorem, ipsum</li>
+        <li className='text-2xl md:text-4xl bg-[#dcdcdc4f] py-6 px-8 rounded-[10px]' >
+          Lorem, ipsum
+          <br /> <span className='text-lg md:text-xl text-[#b4b4b4]'>lorem ipsum dolor sit amet</span>
+        </li>
+        <li className='-ml-4 opacity-75 text-lg md:text-2xl m-4'>Lorem, ipsum</li>
+        <li className='-ml-8 opacity-50 text-lg md:text-2xl m-4'>Lorem, ipsum</li>
+      </ul>
+  */
+  /* .swiper-slide, .swiper-slide-next,.swiper-slide-prev{
+    margin: 4rem;
+    margin-left: -2rem;
+    opacity: 1;
+  } */
+  .swiper-slide-prev>div{
+    background-color: #dcdcdc!important;
+    backdrop-filter: blur(4px);
+  }
+  .swiper-slide-prev>div>img , .swiper-slide-prev>div>p:last-child{
+    display: block!important;
+  }
+  
+  .swiper-slide img, .swiper-slide p:last-child{
+    display: none!important;
+  }
+  

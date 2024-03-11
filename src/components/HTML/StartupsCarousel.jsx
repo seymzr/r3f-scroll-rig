@@ -6,14 +6,14 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import { EffectCoverflow,Autoplay } from 'swiper/modules';
 import slide_image_1 from '../../assets/sabahacademy.png';
-import slide_image_2 from '../../assets/sabahacademy.png';
-import slide_image_3 from '../../assets/sabahacademy.png';
-import slide_image_4 from '../../assets/sabahacademy.png';
-import slide_image_5 from '../../assets/sabahacademy.png';
+import slide_image_2 from '../../assets/sabahstudio.png';
+import slide_image_3 from '../../assets/sabahlab.png';
+import slide_image_4 from '../../assets/sabahincubation.png';
+import slide_image_5 from '../../assets/socar.png';
 
 function StartupsCarousel() {
   return (
-    <div className="">
+    <div className="h-full">
       <Swiper
       spaceBetween={50}
       autoHeight
@@ -30,37 +30,46 @@ function StartupsCarousel() {
           modifier: 2.5,
         }}
         autoplay={{
-            delay: 2500,
+            delay: 1500,
             disableOnInteraction: false,
           }}
         modules={[EffectCoverflow,Autoplay]}
-        className="swiper_container"
+        className="swiper_container h-[50vh]"
       >
         <SwiperSlide>
-          <div className='text-white'>
-            <p className='text-xl'>Push30</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-        <div className='text-white'>
-            <p className='text-xl'>Tredu</p>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className='bg-[#DCDCDC] backdrop-blur-sm p-3 '>
+          
+          <div className='rounded-[8px] py-8 p-5 '>
             <img className='w-24' src={slide_image_1} alt="logo" />
-            <p className='text-white font-medium text-xl'>Peerstack</p>
+            <p className='text-white font-medium text-xl'>11111</p>
             <p className='text-[#7D7D7D] text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className='text-white'>
-            <p className='text-xl'>Peerstack</p>
+          <div className='rounded-[8px] py-8 p-5 '>
+            <img className='w-24' src={slide_image_2} alt="logo" />
+            <p className='text-white font-medium text-xl'>222222</p>
+            <p className='text-[#7D7D7D] text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
           </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className='text-white'>
-            <p className='text-xl'>2School</p>
+          <div className='rounded-[8px] py-8 p-5 '>
+            <img className='w-24' src={slide_image_3} alt="logo" />
+            <p className='text-white font-medium text-xl'>3333</p>
+            <p className='text-[#7D7D7D] text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='rounded-[8px] py-8 p-5 '>
+            <img className='w-24' src={slide_image_4} alt="logo" />
+            <p className='text-white font-medium text-xl'>4444</p>
+            <p className='text-[#7D7D7D] text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide>
+          <div className='rounded-[8px] py-8 p-5 '>
+            <img className='w-24' src={slide_image_5} alt="logo" />
+            <p className='text-white font-medium text-xl'>5555</p>
+            <p className='text-[#7D7D7D] text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
           </div>
         </SwiperSlide>
       </Swiper>
