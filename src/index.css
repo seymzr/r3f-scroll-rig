@@ -177,20 +177,33 @@ canvas, .loading{
     margin-left: -2rem;
     opacity: 1;
   } */
-  .services .swiper-slide-fully-visible>div{
-    background-color: #dcdcdc!important;
-    backdrop-filter: blur(4px);
+  
+  .services .swiper-3d {
+    perspective: 1200px!important;
+}
+  .services .swiper-wrapper{
+    align-items: flex-end!important;
   }
-  .services .swiper-slide-fully-visible>div>img , .swiper-slide-fully-visible>div>p:last-child{
+  .services .swiper-slide-active{
+    padding:0px 50px;
+  }
+  .services .swiper-slide img , .services .swiper-slide>div>p:last-child{
+    display: none!important;
+  }
+  .services .swiper-slide>div{
+    background-color: transparent!important;
+    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06))!important;
+  }
+  .services .swiper-slide-active>div{
+    background-color: #dcdcdc91!important;
+    backdrop-filter: blur(4px);
+    
+  }
+  .services .swiper-slide-active>div>img , .services .swiper-slide-active>div>p:last-child{
     display: block!important;
   }
   
-  .services .swiper-slide>div{
-
-    filter: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06))!important;
-  }
-  .services .swiper-slide img , .services .swiper-slide p:last-child{
-    display: none!important;
-  }
+  
+  
   
   

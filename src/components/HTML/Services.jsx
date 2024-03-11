@@ -20,7 +20,7 @@ const Services = ({navOpened,setNavOpened}) => {
     <h2 className='text-5xl md:text-7xl font-normal text-center'>
       <span style={{ color: "orange" }}>Notable</span> Startups
     </h2>
-    <div className='flex services h-full items-center justify-around w-full py-8 px-12 md:px-0'>
+    <div className='flex services h-full items-center  w-full py-8 px-12 md:px-0'>
       <StartupsCarousel />
       <div></div>
     </div>
