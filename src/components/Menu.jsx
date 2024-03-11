@@ -37,7 +37,7 @@ export const Menu = (props) => {
             <h2 className="text-[#FF7B25] font-medium text-2xl ">About</h2>
             <button onClick={()=>{setAboutClicked(!aboutClicked)}} className='ml-12 md:hidden '><img className={`${aboutClicked?"-rotate-90":""} duration-300`}src={rightarrow} alt="rightarrow" /></button>
             </div>
-            <div className={`${aboutClicked?"block":"hidden md:flex"} duration-300 fex flex-col`}>
+            <div className={`${aboutClicked?"flex":"hidden md:flex"} duration-300 fex flex-col`}>
             <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
               Our Team
             </a>
@@ -70,7 +70,7 @@ export const Menu = (props) => {
             <h2 className="text-[#FF7B25] font-medium text-2xl ">Company</h2>
             <button onClick={()=>{setCompanyClicked(!companyClicked)}} className='ml-12 md:hidden '><img className={`${companyClicked?"-rotate-90":""} duration-300`}src={rightarrow} alt="rightarrow" /></button>
             </div>
-            <div className={`${companyClicked?"block":"hidden md:flex"} duration-300  flex-col`}>
+            <div className={`${companyClicked?"flex":"hidden md:flex"} duration-300  flex-col`}>
               <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
                 Privacy
               </a>

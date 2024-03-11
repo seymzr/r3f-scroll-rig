@@ -39,11 +39,11 @@ const IndexAbout = () => {
   };
 
   return (
-    <div className="about container mx-auto text-white flex items-center justify-between my-8">
-      <div className="about1 w-full">
-        {/* <CardDeck  leftPressed={leftPressed}
+    <div className="about container mx-auto text-white flex flex-col md:flex-row items-center justify-between my-8">
+      <div className="about1 w-full ">
+        <CardDeck  leftPressed={leftPressed}
         rightPressed={rightPressed}
-        cards={cardOptions}/> */}
+        cards={cardOptions}/> 
       </div>
       <div className="about2 w-full">
         <h3 className="text-4xl md:text-6xl">

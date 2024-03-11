@@ -11,11 +11,11 @@ const CardDeck = ({ cards, leftPressed, rightPressed }) => {
 
   const animateToBackOfDeck = (target, card, index) => {
     gsap.to(target, {
-      x: -450,
-      y: -300,
+      x: 0,
+      y: 0,
       scale: 0.9,
       zIndex: 0,
-      rotation: 0,
+
       duration: 0.35,
       onComplete: function () {
         gsap.set(card, { scale: 1 });
@@ -38,10 +38,10 @@ const CardDeck = ({ cards, leftPressed, rightPressed }) => {
       target,
       { x: 250, y: 0 },
       {
-        x: -450,
-        y: -400,
+        x: 0,
+        y: 0,
         scale: 1,
-        rotate: 0,
+
         onComplete: function () {
           gsap.set(card, { scale: 1 });
           const newDeck = [...deck];
@@ -82,9 +82,8 @@ const CardDeck = ({ cards, leftPressed, rightPressed }) => {
     if (rightPressed !== null) {
       lastActionRef.current = "left";
       gsap.to(cardRefs.current[0], {
-        x: -450,
-        y:-400,
-        scale: 1,
+        x: -250,
+        scale: 1.1,
         duration: 0.25,
         onComplete: function () {
           animateToBackOfDeck(cardRefs.current[0], cardRefs.current[0], 0);
@@ -97,18 +96,18 @@ const CardDeck = ({ cards, leftPressed, rightPressed }) => {
   useEffect(() => {
     cardRefs.current.forEach((card, index) => {
       gsap.set(card, { zIndex: deck.length - index });
-      let prevPosition = `${(index + 1)}`;
+      let prevPosition = `${(index + 1) * 5}`;
       if (lastActionRef.current === "right") {
         gsap.to(
           card,
 
-          {x:prevPosition*-10,y:prevPosition*-10,rotation: `0deg`, duration: 0.25 }
+          { rotation: `0deg`, duration: 0.25 }
         );
       } else {
         gsap.fromTo(
           card,
-          { x:prevPosition*-10,y:prevPosition*-10,rotation: '0deg' },
-          { x:prevPosition*-10,y:prevPosition*-10,rotation: `0deg`, duration: 0.25 }
+          { rotation: 0 },
+          { rotation: `0deg`, duration: 0.25 }
         );
       }
 
@@ -130,20 +129,20 @@ const CardDeck = ({ cards, leftPressed, rightPressed }) => {
   }, [deck]);
 
   return (
-    <div className="bg-[#DEDEDE] w-[600px] h-[500px] relative rounded-[8px]">
+    <div className="card_container mb-60  w-[400px] h-[300px] md:w-[600px] md:h-[500px]">
       {deck.map((card, index) => (
         <div
-          className="card bg-[#e9e9e9] absolute top-[50px] left-[50px] drop-shadow-md w-[600px] h-[500px] rounded-[8px] p-8"
+          className="card about1div top-0 -left-[15px] md:top-[50px] md:left-[50px] drop-shadow-md w-[400px] h-[500px] md:w-[600px] md:h-[500px]"
           key={index}
           ref={(el) => (cardRefs.current[index] = el)}
           style={{ position: "absolute" }}
         >
-          <img src={card.logo} alt="sabahacademy.png" />
-            <hr className="h-[2px] bg-[#502688] border-0 w-[30%] my-5" />
-            <p className="text-[#171717] bg-[#fbfbfb] px-4 py-6 rounded-[8px]">
+          <img className="w-48" src={card.logo} alt="sabahacademy.png" />
+            <hr />
+            <p>
               {card.text}
             </p>
-            <button className="gradientbutton my-4">Learn More</button>
+            <button>Learn More</button>
         </div>
       ))}
     </div>
