@@ -11,7 +11,7 @@ export function DotFinal(props) {
   const ref = props.r
   return (
     <group {...props} dispose={null}>
-      <group ref={ref} name="Sphere" rotation={[80,0,0]} position={[-3.5, -1, 0]} scale={0.608}>
+      <group ref={ref} name="Sphere" rotation={[80,0,0]} position={[window.innerWidth<768?0:-3.5, -1, 0]} scale={0.608}>
         <mesh name="Icosphere002_2" geometry={nodes.Icosphere002_2.geometry} material={materials.white} position={[0.124, 0.979, 0.156]} rotation={[2.166, 0.53, 2.211]} scale={0.026} />
         <mesh name="Icosphere002_3" geometry={nodes.Icosphere002_3.geometry} material={materials.white} position={[-0.037, 0.735, -0.669]} rotation={[-0.927, -0.078, 0.227]} scale={0.027} />
         <mesh name="Icosphere002_4" geometry={nodes.Icosphere002_4.geometry} material={materials.white} position={[-0.118, -0.936, -0.319]} rotation={[1.143, -1.032, 0.435]} scale={0.026} />
