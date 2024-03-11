@@ -129,20 +129,20 @@ const CardDeck = ({ cards, leftPressed, rightPressed }) => {
   }, [deck]);
 
   return (
-    <div className="card_container mb-60  w-[400px] h-[300px] md:w-[600px] md:h-[500px]">
+    <div className="card_container mb-60  w-[95%] h-[300px] md:w-[600px] md:h-[500px]">
       {deck.map((card, index) => (
         <div
-          className="card about1div top-0 -left-[15px] md:top-[50px] md:left-[50px] drop-shadow-md w-[400px] h-[500px] md:w-[600px] md:h-[500px]"
+          className="card about1div top-0 -left-0 md:top-[50px] md:left-[50px] p-5 drop-shadow-md w-full mx-3  md:w-[600px] md:h-[500px]"
           key={index}
           ref={(el) => (cardRefs.current[index] = el)}
           style={{ position: "absolute" }}
         >
-          <img className="w-48" src={card.logo} alt="sabahacademy.png" />
-            <hr />
-            <p>
+          <img className=" w-24 md:w-48" src={card.logo} alt="sabahacademy.png" />
+            <hr className="h-[1px] border-0 bg-[#502688] my-3 w-[30%]" />
+            <p className="py-5 px-4 text-sm md:text-md">
               {card.text}
             </p>
-            <button>Learn More</button>
+            <button className="my-3 text-sm md:text-lg">Learn More</button>
         </div>
       ))}
     </div>

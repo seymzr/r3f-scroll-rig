@@ -122,17 +122,11 @@ canvas, .loading{
   border-radius: 8px;
   padding: 30px;
   }
-  .about1div hr{
-    height: 1px;
-    background-color: #502688;
-    border: none;
-    width: 30%;
-    margin-right: 350px;
-  }
+  
   .about1div p{
     color: #171717;
     background-color: #FBFBFB;
-    padding: 40px 30px;
+   
     border-radius: 8px;
   }
   .about1div button {
@@ -145,7 +139,6 @@ canvas, .loading{
     padding: 10px 15px;
     border-radius: 40px;
     display: inline-block;
-    font-size: 18px;
     box-shadow: -1px 0px 1px #f00,1px 0 1px #00f;
     transition: .3s;
     
