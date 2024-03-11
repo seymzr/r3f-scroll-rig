@@ -7,8 +7,36 @@ import rightarrow from '../assets/rightarrow.svg'
 import { useState } from 'react'
 export const Menu = (props) => {
   const { onSectionChange, menuOpened, setMenuOpened } = props
-  const [companyClicked,setCompanyClicked] = useState()
-  const [aboutClicked,setAboutClicked] = useState()
+  const [companyClicked, setCompanyClicked] = useState()
+  const [aboutClicked, setAboutClicked] = useState()
+  const [showForm,setShowForm] = useState()
+
+  const prefix = [
+    {
+      value: '010',
+      label: '010'
+    },
+    {
+      value: '050',
+      label: '050'
+    },
+    {
+      value: '055',
+      label: '055'
+    },
+    {
+      value: '060',
+      label: '060'
+    },
+    {
+      value: '070',
+      label: '070'
+    },
+    {
+      value: '077',
+      label: '077'
+    }
+  ]
   return (
     <div className="flex  w-full justify-between">
       <img className="z-50" src={logo} alt="sabahhub logo" />
@@ -33,44 +61,56 @@ export const Menu = (props) => {
             </a>
           </div>
           <div className="flex flex-col">
-          <div className='flex w-full items-center justify-between mb-2'>
-            <h2 className="text-[#FF7B25] font-medium text-2xl ">About</h2>
-            <button onClick={()=>{setAboutClicked(!aboutClicked)}} className='ml-12 md:hidden '><img className={`${aboutClicked?"-rotate-90":""} duration-300`}src={rightarrow} alt="rightarrow" /></button>
+            <div className="flex w-full items-center justify-between mb-2">
+              <h2 className="text-[#FF7B25] font-medium text-2xl ">About</h2>
+              <button
+                onClick={() => {
+                  setAboutClicked(!aboutClicked)
+                }}
+                className="ml-12 md:hidden ">
+                <img className={`${aboutClicked ? '-rotate-90' : ''} duration-300`} src={rightarrow} alt="rightarrow" />
+              </button>
             </div>
-            <div className={`${aboutClicked?"flex":"hidden md:flex"} duration-300 fex flex-col`}>
-            <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
-              Our Team
-            </a>
-            <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
-              Overview
-            </a>
-            <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
-              Our Portfolio
-            </a>
-            <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
-              Baku ID
-            </a>
-            <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
-              About Us
-            </a>
-            <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
-              Blog
-            </a>
-            <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
-              Career
-            </a>
-            <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
-              Contact
-            </a>
+            <div className={`${aboutClicked ? 'flex' : 'hidden md:flex'} duration-300 fex flex-col`}>
+              <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
+                Our Team
+              </a>
+              <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
+                Overview
+              </a>
+              <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
+                Our Portfolio
+              </a>
+              <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
+                Baku ID
+              </a>
+              <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
+                About Us
+              </a>
+              <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
+                Blog
+              </a>
+              <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
+                Career
+              </a>
+              <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
+                Contact
+              </a>
             </div>
           </div>
-          <hr className='h-[1px] w-full my-2 border-0 bg-[#787878] block md:hidden' />
+          <hr className="h-[1px] w-full my-2 border-0 bg-[#787878] block md:hidden" />
           <div className="flex flex-col">
-            <div className='flex w-full items-center justify-between mb-2'>
-            <h2 className="text-[#FF7B25] font-medium text-2xl ">Company</h2>
-            <button onClick={()=>{setCompanyClicked(!companyClicked)}} className='ml-12 md:hidden '><img className={`${companyClicked?"-rotate-90":""} duration-300`}src={rightarrow} alt="rightarrow" /></button>
+            <div className="flex w-full items-center justify-between mb-2">
+              <h2 className="text-[#FF7B25] font-medium text-2xl ">Company</h2>
+              <button
+                onClick={() => {
+                  setCompanyClicked(!companyClicked)
+                }}
+                className="ml-12 md:hidden ">
+                <img className={`${companyClicked ? '-rotate-90' : ''} duration-300`} src={rightarrow} alt="rightarrow" />
+              </button>
             </div>
-            <div className={`${companyClicked?"flex":"hidden md:flex"} duration-300  flex-col`}>
+            <div className={`${companyClicked ? 'flex' : 'hidden md:flex'} duration-300  flex-col`}>
               <a className="text-xl text-[#A5A5A5] md:text-white py-1 font-normal" href="">
                 Privacy
               </a>
@@ -97,14 +137,41 @@ export const Menu = (props) => {
           <div className="w-full md:w-fit my-5 md:my-0 flex flex-col items-center self-center">
             <h2 className="text-white font-medium text-2xl self-start">Subscribe to our newsletter</h2>
             <div className="w-fit relative my-3 flex flex-col ">
+              <div className={`${showForm?"hidden":"flex"}  flex-col`}>
               <input
                 type="email"
                 placeholder="Your email"
-                className=" rounded-[8px] w-full border border-solid border-[#EBEAED] text-white bg-transparent p-2 px-3 w-[330px]"
+                className=" focus:outline-none rounded-[8px] w-full border border-solid border-[#EBEAED] text-white bg-transparent p-2 px-3 w-[330px]"
               />
-              <button className="bg-[#ff7b25] rounded-[8px] p-3 px-4 absolute right-0">
+              <button onClick={()=>setShowForm(true)} className="bg-[#ff7b25] rounded-[8px] p-3 px-4 absolute right-0">
                 <img src={newsletter} alt="newsletter" />
               </button>
+              </div>
+              <div className={`${showForm?"flex":"hidden"} my-2  flex-col`}>
+                <input
+                  type="text"
+                  placeholder="Full Name"
+                  className=" focus:outline-none rounded-[8px] w-full border border-solid border-[#EBEAED] text-white bg-transparent p-2 px-3 w-[330px]"
+                />
+                <div className="flex my-2">
+                  <select
+                    className=" focus:outline-none rounded-l-[8px] w-[40%] border border-solid border-[#EBEAED] border-r-0 text-white bg-transparent p-2 px-3 w-[330px]"
+                    name=""
+                    id="">
+                    {prefix.map((item, index) => (
+                      <option key={index} value={item.value}>
+                        {item.label}
+                      </option>
+                    ))}
+                  </select>
+                  <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    className=" focus:outline-none rounded-r-[8px] w-full border border-solid border-[#EBEAED] text-white bg-transparent p-2 px-3 w-[330px]"
+                  />
+                </div>
+                <button onClick={()=>setShowForm(false)} className='w-full bg-[#FF7B25] rounded-[8px] px-5 py-2 text-white font-bold'>Subscribe</button>
+              </div>
             </div>
             <div className="flex flex-col w-full">
               <div className="flex items-center">
