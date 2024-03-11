@@ -22,7 +22,7 @@ function StartupsCarousel() {
         grabCursor={true}
         centeredSlides={true}
         loop={true}
-        slidesPerView={6} // Display 5 elements at a time
+        slidesPerView={3} // Display 5 elements at a time
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -34,41 +34,94 @@ function StartupsCarousel() {
             disableOnInteraction: false,
           }}
         modules={[EffectCoverflow,Autoplay]}
-        className="swiper_container h-[50vh] w-full md:w-[50%]  "
+        className="swiper_container h-[50vh] min-w-[350px] w-full md:w-[50%]  "
       >
-        <SwiperSlide>
+        <SwiperSlide className='min-w-[300px]'>
           
-          <div className='rounded-[8px] py-8 p-5 '>
+          <div className='rounded-[8px] min-w-[300px] py-8 p-5 '>
             <img className='w-24' src={slide_image_1} alt="logo" />
             <h2 className='text-white font-medium text-xl'>11111</h2>
             <p className='text-white text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className='rounded-[8px] py-8 p-5 '>
+        <SwiperSlide className='min-w-[300px]'>
+          <div className='rounded-[8px] min-w-[300px] py-8 p-5 '>
             <img className='w-24' src={slide_image_2} alt="logo" />
             <h2 className='text-white font-medium text-xl'>222222</h2>
             <p className='text-white text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className='rounded-[8px] py-8 p-5 '>
+        <SwiperSlide className='min-w-[300px]'>
+          
+          <div className='rounded-[8px] min-w-[300px] py-8 p-5 '>
+            <img className='w-24' src={slide_image_1} alt="logo" />
+            <h2 className='text-white font-medium text-xl'>11111</h2>
+            <p className='text-white text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className='min-w-[300px]'>
+          <div className='rounded-[8px] min-w-[300px] py-8 p-5 '>
             <img className='w-24' src={slide_image_3} alt="logo" />
             <h2 className='text-white font-medium text-xl'>3333</h2>
             <p className='text-white text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className='rounded-[8px] py-8 p-5 '>
+        <SwiperSlide className='min-w-[300px]'>
+          
+          <div className='rounded-[8px] min-w-[300px] py-8 p-5 '>
+            <img className='w-24' src={slide_image_1} alt="logo" />
+            <h2 className='text-white font-medium text-xl'>11111</h2>
+            <p className='text-white text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className='min-w-[300px]'>
+          <div className='rounded-[8px] min-w-[300px] py-8 p-5 '>
             <img className='w-24' src={slide_image_4} alt="logo" />
             <h2 className='text-white font-medium text-xl'>4444</h2>
             <p className='text-white text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
           </div>
         </SwiperSlide>
-        <SwiperSlide>
-          <div className='rounded-[8px] py-8 p-5 '>
+        <SwiperSlide className='min-w-[300px]'>
+          
+          <div className='rounded-[8px] min-w-[300px] py-8 p-5 '>
+            <img className='w-24' src={slide_image_1} alt="logo" />
+            <h2 className='text-white font-medium text-xl'>11111</h2>
+            <p className='text-white text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className='min-w-[300px]'>
+          <div className='rounded-[8px] min-w-[300px] py-8 p-5 '>
             <img className='w-24' src={slide_image_5} alt="logo" />
             <h2 className='text-white font-medium text-xl'>5555</h2>
+            <p className='text-white text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className='min-w-[300px]'>
+          
+          <div className='rounded-[8px] min-w-[300px] py-8 p-5 '>
+            <img className='w-24' src={slide_image_1} alt="logo" />
+            <h2 className='text-white font-medium text-xl'>11111</h2>
+            <p className='text-white text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
+          </div>
+        </SwiperSlide><SwiperSlide className='min-w-[300px]'>
+          
+          <div className='rounded-[8px] min-w-[300px] py-8 p-5 '>
+            <img className='w-24' src={slide_image_1} alt="logo" />
+            <h2 className='text-white font-medium text-xl'>11111</h2>
+            <p className='text-white text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
+          </div>
+        </SwiperSlide><SwiperSlide className='min-w-[300px]'>
+          
+          <div className='rounded-[8px] min-w-[300px] py-8 p-5 '>
+            <img className='w-24' src={slide_image_1} alt="logo" />
+            <h2 className='text-white font-medium text-xl'>11111</h2>
+            <p className='text-white text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
+          </div>
+        </SwiperSlide><SwiperSlide className='min-w-[300px]'>
+          
+          <div className='rounded-[8px] min-w-[300px] py-8 p-5 '>
+            <img className='w-24' src={slide_image_1} alt="logo" />
+            <h2 className='text-white font-medium text-xl'>11111</h2>
             <p className='text-white text-md'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia, dicta.</p>
           </div>
         </SwiperSlide>
