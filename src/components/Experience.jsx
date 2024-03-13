@@ -26,9 +26,9 @@ export const Experience = (props) => {
   const { viewport } = useThree();
   const data = useScroll();
 
-  const isMobile = window.innerWidth < 768;
+
   const responsiveRatio = viewport.width / 12;
-  const officeScaleRatio = Math.max(0.5, Math.min(0.9 * responsiveRatio, 0.9));
+
 
   const [section, setSection] = useState(0);
 
@@ -44,17 +44,7 @@ export const Experience = (props) => {
     });
   }, [menuOpened]);
 
-  const characterContainerAboutRef = useRef();
-
-  const [characterAnimation, setCharacterAnimation] = useState("Typing");
-  useEffect(() => {
-    setCharacterAnimation("Falling");
-    setTimeout(() => {
-      setCharacterAnimation(section === 0 ? "Typing" : "Standing");
-    }, 600);
-  }, [section]);
-
-  const characterGroup = useRef();
+  
 
   useFrame((state) => {
     let curSection = Math.floor(data.scroll.current * data.pages);
@@ -121,7 +111,7 @@ export const Experience = (props) => {
         <Cube r={random} visible={item === "cube"} />
       </Float>
       <Environment preset="sunset" blur={5} />
-      {/* <Rig /> */}
+      <Rig />
     </>
   );
 };

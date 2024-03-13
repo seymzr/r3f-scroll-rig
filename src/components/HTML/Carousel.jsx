@@ -7,15 +7,16 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-import asana from '../../assets/asanaLogo.png'
-import jira from '../../assets/jira.png'
-import slack from '../../assets/slack.png'
-import atlassian from '../../assets/atlassian.png'
-import socar from '../../assets/socar.png'
-import tehsil from '../../assets/tehsil.png'
-import pashaholding from '../../assets/pashaholding.png'
-import iqtisadiyyat from '../../assets/iqtisadiyyat.png'
-import neqliyyat from '../../assets/neqliyyat.png'
+import arti from '../../assets/arti.png'
+import bda from '../../assets/bda.png'
+import code from '../../assets/code.png'
+import div from '../../assets/div.png'
+import domino from '../../assets/domino.png'
+import hirelamp from '../../assets/hirelamp.png'
+import icyf from '../../assets/icyf.png'
+import ie from '../../assets/ie.png'
+import space from '../../assets/space.png'
+import trilogy from '../../assets/trilogy.png'
 
 // import required modules
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
@@ -36,15 +37,16 @@ export default function Carousel() {
         modules={[Autoplay]}
         className="mySwiper"
       >
-        <SwiperSlide><img src={asana} alt="asanalogo" /></SwiperSlide>
-        <SwiperSlide><img src={jira} alt="jira" /></SwiperSlide>
-        <SwiperSlide><img src={slack} alt="logo" /></SwiperSlide>
-        <SwiperSlide><img src={pashaholding} alt="logo" /></SwiperSlide>
-        <SwiperSlide><img src={tehsil} alt="logo" /></SwiperSlide>
-        <SwiperSlide><img src={neqliyyat} alt="logo" /></SwiperSlide>
-        <SwiperSlide><img src={iqtisadiyyat} alt="logo" /></SwiperSlide>
-        <SwiperSlide><img src={atlassian} alt="logo" /></SwiperSlide>
-        <SwiperSlide><img src={socar} alt="logo" /></SwiperSlide>
+        <SwiperSlide><img className='w-36' src={arti} alt="arti" /></SwiperSlide>
+        <SwiperSlide><img className='w-24' src={bda} alt="bda" /></SwiperSlide>
+        <SwiperSlide><img src={code} alt="code" /></SwiperSlide>
+        <SwiperSlide><img src={div} alt="div" /></SwiperSlide>
+        <SwiperSlide><img src={domino} alt="domino" /></SwiperSlide>
+        <SwiperSlide><img src={hirelamp} alt="hirelamp" /></SwiperSlide>
+        <SwiperSlide><img className='w-36' src={icyf} alt="icyf" /></SwiperSlide>
+        <SwiperSlide><img src={ie} alt="ie" /></SwiperSlide>
+        <SwiperSlide><img src={space} alt="space" /></SwiperSlide>
+        <SwiperSlide><img src={trilogy} alt="trilogy" /></SwiperSlide>
       </Swiper>
     </div>
   );

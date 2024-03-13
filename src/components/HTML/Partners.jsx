@@ -37,8 +37,6 @@ const Partners = () => {
       </div>
       <div className='my-12 w-full flex items-center justify-center '>
         <Carousel />
-
-
       </div>
     </div>
   )

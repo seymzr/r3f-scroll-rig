@@ -240,6 +240,7 @@ export const useTransformation = (ref1, ref2, ref3, random) => {
         //ref1.current.position.x = THREE.MathUtils.lerp(ref1.current.position.x,2.5,scaleProgress)
         //ref1.current.position.x = THREE.MathUtils.lerp(ref1.current.position.x,2,scaleProgress)
       }
+      
     }
 
 
@@ -323,7 +324,7 @@ mesh.material.color.copy(lerpedColor);
           mesh.position.y = THREE.MathUtils.lerp(ref2Positions[index].y, randomPositions[index].y, (scrollData.offset - 0.6) * 5)
           mesh.position.z = THREE.MathUtils.lerp(ref2Positions[index].z, randomPositions[index].z, (scrollData.offset - 0.6) * 5)
         }
-      } else {
+      } else  {
         // Smoothly interpolate between random position and reference 3 position
         if (mesh.material && randomPositions[index] && ref3Positions[index]) {
           mesh.position.x = THREE.MathUtils.lerp(

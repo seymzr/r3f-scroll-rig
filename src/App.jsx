@@ -43,7 +43,7 @@ function App() {
     <SpotLight color={"#ff7b25"} intensity={.01} position={[4.5,-1,0]} />
     
           <color attach="background" args={["#000"]} />
-          <ScrollControls pages={7.6} damping={0.1}>
+          <ScrollControls pages={7.6} damping={0.2}>
             <ScrollManager section={section} onSectionChange={setSection} />
 
 
