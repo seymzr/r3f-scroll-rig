@@ -27,7 +27,7 @@ export function Unicorn1(props) {
   return (
     <group {...props}  dispose={null}>
       <group name="Sketchfab_model001" rotation={[-Math.PI / 2, 0, 0]}>
-        <group name="Object_2" ref={body} scale={0.01}>
+        <group name="Object_2" ref={body}>
           <mesh name="Icosphere_81" geometry={nodes.Icosphere_81.geometry} material={materials.material} position={[1.727, -1.112, 0.835]} rotation={[Math.PI / 2, -1.035, -0.639]} scale={-0.03} />
           <mesh name="Icosphere_82" geometry={nodes.Icosphere_82.geometry} material={materials.material} position={[1.382, -1.17, 1.302]} rotation={[Math.PI / 2, -0.157, 0.694]} scale={-0.111} />
           <mesh name="Icosphere_83" geometry={nodes.Icosphere_83.geometry} material={materials.material} position={[2.919, -0.346, 1.165]} rotation={[-Math.PI / 2, -0.924, 3.064]} scale={-0.035} />

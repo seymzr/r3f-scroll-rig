@@ -20,6 +20,7 @@ import { Unicorn1 } from "./Unicorn1";
 import { Cube } from "./Cube";
 import { useTransformation } from "../hooks/useTransformation";
 import { Vector3 } from "three";
+import { Unicorn } from "./Unicorn";
 
 export const Experience = (props) => {
   const { menuOpened } = props;
@@ -107,7 +108,7 @@ export const Experience = (props) => {
       <Float floatIntensity={1} speed={1}>
         <DotFinal scale={.2} visible={item === "dot2"} r={ref1} />
         <RocketFinal2 r={ref2} visible={item == "rocket final"} />
-        <Unicorn1 r={ref3} visible={item === "unicorn1"} />
+        <Unicorn r={ref3} visible={item === "unicorn1"} />
         <Cube r={random} visible={item === "cube"} />
       </Float>
       <Environment preset="sunset" blur={5} />

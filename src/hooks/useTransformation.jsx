@@ -172,41 +172,37 @@ export const useTransformation = (ref1, ref2, ref3, random) => {
     if (!isMobile && scrollData.offset < 1 && scrollData.offset > 0.8) {
       ref1.current.position.x = THREE.MathUtils.lerp(-2, 2, (scrollData.offset - 0.8) / 0.2)
     }
-    if(!isMobile){
+    if (!isMobile) {
       if (scrollData.offset < 0.2) {
         // First 20% of the scroll (scale up)
-        const scaleProgress = scrollData.offset / 0.2 // Normalize the progress
-        ref1.current.scale.setScalar(THREE.MathUtils.lerp(2, 7, scaleProgress))
-        if (!isMobile) {
-          ref1.current.position.x = THREE.MathUtils.lerp(ref1.current.originalPosition.x, 2, scaleProgress)
-        }
+        const scaleProgress = scrollData.offset / 0.2; // Normalize the progress
+        ref1.current.scale.setScalar(THREE.MathUtils.lerp(2, 7, scaleProgress));
+        ref1.current.position.x = THREE.MathUtils.lerp(ref1.current.originalPosition.x, 2, scaleProgress);
       } else if (scrollData.offset < 0.4) {
         // 20% to 40% of the scroll (scale down)
-        const scaleProgress = (scrollData.offset - 0.2) / 0.2 // Normalize the progress
-        ref1.current.scale.setScalar(THREE.MathUtils.lerp(7, 4, scaleProgress))
-        if (!isMobile) {
-          ref1.current.position.x = THREE.MathUtils.lerp(ref1.current.position.x, 2, scaleProgress)
-        }
+        const scaleProgress = (scrollData.offset - 0.2) / 0.2; // Normalize the progress
+        ref1.current.scale.setScalar(THREE.MathUtils.lerp(7, 4, scaleProgress));
+        ref1.current.position.x = THREE.MathUtils.lerp(ref1.current.position.x, 2, scaleProgress);
       } else if (scrollData.offset < 0.6) {
-        const scaleProgress = (scrollData.offset - 0.4) / 0.2
-        ref1.current.scale.setScalar(THREE.MathUtils.lerp(4, 4, scaleProgress))
-        if (!isMobile) {
-          ref1.current.position.x = THREE.MathUtils.lerp(ref1.current.position.x, -2, (scrollData.offset - 0.4) / 0.2)
-        }
+        // 40% to 60% of the scroll (maintain scale)
+        const scaleProgress = (scrollData.offset - 0.4) / 0.2; // Normalize the progress
+        ref1.current.scale.setScalar(4); // Maintain scale
+        ref1.current.position.x = THREE.MathUtils.lerp(ref1.current.position.x, -2, scaleProgress);
       } else if (scrollData.offset < 0.8) {
-        // 40% to 80% of the scroll (scale up)
-        const scaleProgress = (scrollData.offset - 0.6) / 0.2 // Normalize the progress
-        //ref1.current.position.x = THREE.MathUtils.lerp(ref1.current.position.x,1,scaleProgress/2)
-        ref1.current.scale.setScalar(THREE.MathUtils.lerp(4, 6, scaleProgress))
+        // 60% to 80% of the scroll (scale up)
+        const scaleProgress = (scrollData.offset - 0.6) / 0.2; // Normalize the progress
+        ref1.current.scale.setScalar(THREE.MathUtils.lerp(4, 5, scaleProgress));
+      } else if (scrollData.offset < 0.9) {
+        // 80% to 90% of the scroll (scale down)
+        const scaleProgress = (scrollData.offset - 0.8) / 0.1; // Normalize the progress
+        ref1.current.scale.setScalar(THREE.MathUtils.lerp(5, 1.5, scaleProgress));
       } else {
-        // Last 20% of the scroll (scale down)
-        const scaleProgress = (scrollData.offset - 0.8) / 0.2 // Normalize the progress
-        ref1.current.scale.setScalar(THREE.MathUtils.lerp(6, 0.6, scaleProgress))
-        // ref1.current.position.y = THREE.MathUtils.lerp(ref1.current.position.y,-1.5,scaleProgress)
-        //ref1.current.position.x = THREE.MathUtils.lerp(ref1.current.position.x,2.5,scaleProgress)
-        //ref1.current.position.x = THREE.MathUtils.lerp(ref1.current.position.x,2,scaleProgress)
+        // Last 10% of the scroll (scale down)
+        const scaleProgress = (scrollData.offset - 0.9) / 0.1; // Normalize the progress
+        ref1.current.scale.setScalar(THREE.MathUtils.lerp(1.5, 0.6, scaleProgress));
       }
-    }else {
+    }
+    else {
       if (scrollData.offset < 0.2) {
         // First 20% of the scroll (scale up)
         const scaleProgress = scrollData.offset / 0.2 // Normalize the progress
@@ -255,14 +251,19 @@ export const useTransformation = (ref1, ref2, ref3, random) => {
         // 20% to 40% of the scroll (scale down)
         const scaleProgress = (scrollData.offset - 0.2) / 0.2 // Normalize the progress
         mesh.scale.setScalar(THREE.MathUtils.lerp(0.01, 0.02, scaleProgress))
-      } else if (scrollData.offset < 0.8) {
+      }
+      else if(scrollData.offset<0.6){
+        const scaleProgress = (scrollData.offset-0.4)/0.2
+        mesh.scale.setScalar(THREE.MathUtils.lerp(0.02,0.02,scaleProgress))
+      }
+      else if (scrollData.offset < 0.8) {
         // 40% to 80% of the scroll (scale up)
         const scaleProgress = (scrollData.offset - 0.4) / 0.4 // Normalize the progress
-        mesh.scale.setScalar(THREE.MathUtils.lerp(0.02, 0.01, scaleProgress))
+        mesh.scale.setScalar(THREE.MathUtils.lerp(0.02, 0.02, scaleProgress))
       } else {
         // Last 20% of the scroll (scale down)
         const scaleProgress = (scrollData.offset - 0.8) / 0.2 // Normalize the progress
-        mesh.scale.setScalar(THREE.MathUtils.lerp(0.01, 0.1, scaleProgress))
+        mesh.scale.setScalar(THREE.MathUtils.lerp(0.02, 0.06, scaleProgress))
       }
 
       if (mesh.material) {
